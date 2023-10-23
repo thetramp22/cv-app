@@ -1,11 +1,11 @@
-export function InputField() {
+export function InputField({ name, type }) {
   return (
     <input
-      type="text"
+      type={type}
       className="text-input"
-      aria-label="full name"
-      id="full-name"
-      placeholder="Full Name"
+      aria-label={name}
+      id={crypto.randomUUID}
+      placeholder={name}
     />
   );
 }

@@ -1,13 +1,17 @@
 import React from "react";
-import { InputField } from "./InputField";
+import InputField from "./InputField";
 
-const InputSection = () => {
+const InputSection = ({ name, fields }) => {
   return (
     <div>
-      <h2>General Information</h2>
-      <InputField name="Full Name" type="text" />
-      <InputField name="Email" type="email" />
-      <InputField name="Location" type="text" />
+      <h2>{name}</h2>
+      {fields.map((field) => (
+        <InputField
+          key={crypto.randomUUID}
+          name={field.name}
+          type={field.type}
+        />
+      ))}
     </div>
   );
 };

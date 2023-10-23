@@ -1,11 +1,9 @@
-export function InputField({ name, type }) {
+import React from "react";
+
+const InputField = ({ name, type }) => {
   return (
-    <input
-      type={type}
-      className="text-input"
-      aria-label={name}
-      id={crypto.randomUUID}
-      placeholder={name}
-    />
+    <input type={type} className="input" aria-label={name} placeholder={name} />
   );
-}
+};
+
+export default InputField;

@@ -1,11 +1,17 @@
 import "../styles/Sidebar.css";
-import { InputField } from "./InputField";
 
-export function Sidebar() {
+export function Sidebar({ fullName }) {
   return (
     <aside className="sidebar">
       <h2 className="sidebar-title">Personal Details</h2>
-      <InputField />
+      <input
+        type="text"
+        className="text-input"
+        aria-label="full name"
+        id="full-name"
+        placeholder="Full Name"
+        value={fullName}
+      />
     </aside>
   );
 }

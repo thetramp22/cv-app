@@ -1,3 +1,5 @@
+import "../styles/Resume.css";
+
 export function Resume() {
   return (
     <div className="resume">

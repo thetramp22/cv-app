@@ -7,11 +7,7 @@ const InputSection = ({ name, fields }) => {
     <div className="input-section">
       <h2>{name}</h2>
       {fields.map((field) => (
-        <InputField
-          key={crypto.randomUUID}
-          name={field.name}
-          type={field.type}
-        />
+        <InputField key={field.id} name={field.name} type={field.type} />
       ))}
     </div>
   );

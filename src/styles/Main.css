@@ -8,13 +8,10 @@
 
 body {
   /* VARIABLES */
-  --bg-color: #333;
-  --text-color: #eee;
-  --header-bg-color: #003775;
-  --header-height: 100px;
-  --sidebar-bg-color: #666;
-  --sidebar-width: 350px;
-  --resume-text: black;
+  --bg-color: #ddd;
+  --text-color: #222;
+  --section-bg: white;
+  --section-shadow: #bbb;
 
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text-color);

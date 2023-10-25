@@ -1,10 +1,15 @@
-const Resume = () => {
+import PropTypes from "prop-types";
+
+const Resume = ({ generalInfoData }) => {
   return (
     <>
-      <h2>Resume</h2>
-      <p>Full Name</p>
+      <p>{generalInfoData.fullName}</p>
     </>
   );
+};
+
+Resume.propTypes = {
+  generalInfoData: PropTypes.object,
 };
 
 export default Resume;

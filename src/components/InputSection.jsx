@@ -1,19 +1,7 @@
-/* eslint-disable react/prop-types */
 import "../styles/InputSection.css";
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-const GeneralInputSection = () => {
-  const [generalInfoData, setGeneralInfoData] = useState({
-    fullName: "",
-    email: "",
-    location: "",
-  });
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setGeneralInfoData({ ...generalInfoData, [e.target.name]: value });
-  };
-
+const GeneralInputSection = ({ generalInfoData, onChange }) => {
   return (
     <div className="input-section">
       <h2>General Information</h2>
@@ -24,7 +12,7 @@ const GeneralInputSection = () => {
         aria-label="Full Name"
         placeholder="Full Name"
         value={generalInfoData.fullName}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <input
         name="email"
@@ -33,7 +21,7 @@ const GeneralInputSection = () => {
         aria-label="Email"
         placeholder="Email"
         value={generalInfoData.email}
-        onChange={handleChange}
+        onChange={onChange}
       />
       <input
         name="location"
@@ -42,10 +30,15 @@ const GeneralInputSection = () => {
         aria-label="Location"
         placeholder="Location"
         value={generalInfoData.location}
-        onChange={handleChange}
+        onChange={onChange}
       />
     </div>
   );
+};
+
+GeneralInputSection.propTypes = {
+  generalInfoData: PropTypes.object,
+  onChange: PropTypes.func,
 };
 
 export default GeneralInputSection;

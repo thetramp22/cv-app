@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import "../styles/InputField.css";
+import PropTypes from "prop-types";
 
 const InputField = ({ name, type, value, onChange }) => {
   return (
@@ -12,6 +12,13 @@ const InputField = ({ name, type, value, onChange }) => {
       onChange={onChange}
     />
   );
+};
+
+InputField.propTypes = {
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default InputField;

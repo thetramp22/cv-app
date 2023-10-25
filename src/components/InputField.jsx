@@ -1,13 +1,21 @@
 import "../styles/InputField.css";
 import PropTypes from "prop-types";
 
-const InputField = ({ name, type, value, onChange }) => {
+const InputField = ({
+  name,
+  type,
+  className,
+  placeholder,
+  value,
+  onChange,
+}) => {
   return (
     <input
+      name={name}
       type={type}
-      className="input"
-      aria-label={name}
-      placeholder={name}
+      className={className}
+      aria-label={placeholder}
+      placeholder={placeholder}
       value={value}
       onChange={onChange}
     />
@@ -17,6 +25,8 @@ const InputField = ({ name, type, value, onChange }) => {
 InputField.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };

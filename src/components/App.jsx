@@ -15,6 +15,27 @@ const App = () => {
     setGeneralInfoData({ ...generalInfoData, [e.target.name]: value });
   };
 
+  const generalInputFields = [
+    {
+      name: "fullName",
+      type: "text",
+      className: "input",
+      placeholder: "Full Name",
+    },
+    {
+      name: "email",
+      type: "email",
+      className: "input",
+      placeholder: "Email",
+    },
+    {
+      name: "location",
+      type: "text",
+      className: "input",
+      placeholder: "Location",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -22,7 +43,9 @@ const App = () => {
       </header>
       <main>
         <InputSection
-          generalInfoData={generalInfoData}
+          sectionName="General Information"
+          inputFields={generalInputFields}
+          data={generalInfoData}
           onChange={handleChange}
         />
         <Resume generalInfoData={generalInfoData} />

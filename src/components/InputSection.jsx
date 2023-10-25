@@ -1,16 +1,51 @@
-import React from "react";
-import InputField from "./InputField";
+/* eslint-disable react/prop-types */
 import "../styles/InputSection.css";
+import { useState } from "react";
 
-const InputSection = ({ name, fields }) => {
+const GeneralInputSection = () => {
+  const [generalInfoData, setGeneralInfoData] = useState({
+    fullName: "",
+    email: "",
+    location: "",
+  });
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setGeneralInfoData({ ...generalInfoData, [e.target.name]: value });
+  };
+
   return (
     <div className="input-section">
-      <h2>{name}</h2>
-      {fields.map((field) => (
-        <InputField key={field.id} name={field.name} type={field.type} />
-      ))}
+      <h2>General Information</h2>
+      <input
+        name="fullName"
+        type="text"
+        className="input"
+        aria-label="Full Name"
+        placeholder="Full Name"
+        value={generalInfoData.fullName}
+        onChange={handleChange}
+      />
+      <input
+        name="email"
+        type="email"
+        className="input"
+        aria-label="Email"
+        placeholder="Email"
+        value={generalInfoData.email}
+        onChange={handleChange}
+      />
+      <input
+        name="location"
+        type="text"
+        className="input"
+        aria-label="Location"
+        placeholder="Location"
+        value={generalInfoData.location}
+        onChange={handleChange}
+      />
     </div>
   );
 };
 
-export default InputSection;
+export default GeneralInputSection;

@@ -8,3 +8,14 @@
   gap: 20px;
   box-shadow: 5px 5px 10px var(--section-shadow);
 }
+
+.input {
+  background-color: var(--bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.input:focus {
+  outline: 0;
+}

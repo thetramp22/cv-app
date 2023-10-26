@@ -2,17 +2,14 @@ import { useState } from "react";
 import "../styles/App.css";
 import InputSection from "./InputSection";
 import Resume from "./Resume";
+import resumeData from "../utils/resumeData";
 
 const App = () => {
-  const [generalInfoData, setGeneralInfoData] = useState({
-    fullName: "",
-    email: "",
-    location: "",
-  });
+  const [data, setData] = useState(resumeData);
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setGeneralInfoData({ ...generalInfoData, [e.target.name]: value });
+    setData({ ...data, [e.target.name]: value });
   };
 
   const generalInputFields = [
@@ -45,10 +42,10 @@ const App = () => {
         <InputSection
           sectionName="General Information"
           inputFields={generalInputFields}
-          data={generalInfoData}
+          data={data}
           onChange={handleChange}
         />
-        <Resume generalInfoData={generalInfoData} />
+        <Resume data={data} />
       </main>
     </>
   );

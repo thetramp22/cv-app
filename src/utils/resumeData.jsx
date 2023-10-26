@@ -1,13 +1,11 @@
 const resumeData = {
   fullName: "",
   email: "",
-  location: "",
+  phone: "",
+  city: "",
+  state: "",
+  country: "",
+  zip: "",
 };
 
-const sampleData = {
-  fullName: "John Doe",
-  email: "johndoe@justdoeit.com",
-  location: "Anytown, GG USA",
-};
-
-export default { resumeData, sampleData };
+export default resumeData;

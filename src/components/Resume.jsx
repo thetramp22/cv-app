@@ -5,7 +5,11 @@ const Resume = ({ data }) => {
     <>
       <p>{data.fullName}</p>
       <p>{data.email}</p>
-      <p>{data.location}</p>
+      <p>{data.phone}</p>
+      <p>{data.city}</p>
+      <p>{data.state}</p>
+      <p>{data.country}</p>
+      <p>{data.zip}</p>
     </>
   );
 };

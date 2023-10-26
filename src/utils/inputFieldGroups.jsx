@@ -13,10 +13,34 @@ const inputFieldGroups = {
       placeholder: "Email",
     },
     {
-      name: "location",
+      name: "phone",
       type: "text",
       className: "input",
-      placeholder: "Location",
+      placeholder: "Phone Number",
+    },
+    {
+      name: "city",
+      type: "text",
+      className: "input",
+      placeholder: "City",
+    },
+    {
+      name: "state",
+      type: "text",
+      className: "input",
+      placeholder: "State/Province",
+    },
+    {
+      name: "country",
+      type: "text",
+      className: "input",
+      placeholder: "Country",
+    },
+    {
+      name: "zip",
+      type: "text",
+      className: "input",
+      placeholder: "Zip/Postal Code",
     },
   ],
 };

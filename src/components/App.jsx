@@ -6,11 +6,23 @@ import resumeData from "../utils/resumeData";
 import inputFieldGroups from "../utils/inputFieldGroups";
 
 const App = () => {
-  const [data, setData] = useState(resumeData);
+  const [generalData, setGeneralData] = useState(resumeData.general);
+  const [experienceData, setExperienceData] = useState(resumeData.experience);
+  const [educationData, setEducationData] = useState(resumeData.education);
 
-  const handleChange = (e) => {
+  const handleGeneralInfoChange = (e) => {
     const value = e.target.value;
-    setData({ ...data, [e.target.name]: value });
+    setGeneralData({ ...generalData, [e.target.name]: value });
+  };
+
+  const handleExperienceInfoChange = (e) => {
+    const value = e.target.value;
+    setExperienceData({ ...experienceData, [e.target.name]: value });
+  };
+
+  const handleEducationInfoChange = (e) => {
+    const value = e.target.value;
+    setEducationData({ ...educationData, [e.target.name]: value });
   };
 
   return (
@@ -21,11 +33,23 @@ const App = () => {
       <main>
         <InputSection
           sectionName="General Information"
-          inputFields={inputFieldGroups.generalInputFields}
-          data={data}
-          onChange={handleChange}
+          inputFields={inputFieldGroups.general}
+          data={generalData}
+          onChange={handleGeneralInfoChange}
         />
-        <Resume data={data} />
+        <InputSection
+          sectionName="Experience"
+          inputFields={inputFieldGroups.experience}
+          data={experienceData}
+          onChange={handleExperienceInfoChange}
+        />
+        <InputSection
+          sectionName="Education"
+          inputFields={inputFieldGroups.education}
+          data={educationData}
+          onChange={handleEducationInfoChange}
+        />
+        <Resume data={{ generalData, experienceData, educationData }} />
       </main>
     </>
   );

@@ -4,6 +4,8 @@ const Resume = ({ data }) => {
   return (
     <>
       <p>{data.fullName}</p>
+      <p>{data.email}</p>
+      <p>{data.location}</p>
     </>
   );
 };

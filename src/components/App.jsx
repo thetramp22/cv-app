@@ -3,6 +3,7 @@ import "../styles/App.css";
 import InputSection from "./InputSection";
 import Resume from "./Resume";
 import resumeData from "../utils/resumeData";
+import inputFieldGroups from "../utils/inputFieldGroups";
 
 const App = () => {
   const [data, setData] = useState(resumeData);
@@ -12,27 +13,6 @@ const App = () => {
     setData({ ...data, [e.target.name]: value });
   };
 
-  const generalInputFields = [
-    {
-      name: "fullName",
-      type: "text",
-      className: "input",
-      placeholder: "Full Name",
-    },
-    {
-      name: "email",
-      type: "email",
-      className: "input",
-      placeholder: "Email",
-    },
-    {
-      name: "location",
-      type: "text",
-      className: "input",
-      placeholder: "Location",
-    },
-  ];
-
   return (
     <>
       <header>
@@ -41,7 +21,7 @@ const App = () => {
       <main>
         <InputSection
           sectionName="General Information"
-          inputFields={generalInputFields}
+          inputFields={inputFieldGroups.generalInputFields}
           data={data}
           onChange={handleChange}
         />

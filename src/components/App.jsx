@@ -27,30 +27,36 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <h1 className="page-title">Resume Builder</h1>
-      </header>
-      <main>
-        <InputSection
-          sectionName="General Information"
-          inputFields={inputFieldGroups.general}
-          data={generalData}
-          onChange={handleGeneralInfoChange}
-        />
-        <InputSection
-          sectionName="Experience"
-          inputFields={inputFieldGroups.experience}
-          data={experienceData}
-          onChange={handleExperienceInfoChange}
-        />
-        <InputSection
-          sectionName="Education"
-          inputFields={inputFieldGroups.education}
-          data={educationData}
-          onChange={handleEducationInfoChange}
-        />
-        <Resume data={{ generalData, experienceData, educationData }} />
-      </main>
+      <div className="main-container">
+        <header>
+          <h1 className="page-title">Resume Builder</h1>
+        </header>
+        <main className="main">
+          <aside className="sidebar">
+            <InputSection
+              sectionName="General Information"
+              inputFields={inputFieldGroups.general}
+              data={generalData}
+              onChange={handleGeneralInfoChange}
+            />
+            <InputSection
+              sectionName="Experience"
+              inputFields={inputFieldGroups.experience}
+              data={experienceData}
+              onChange={handleExperienceInfoChange}
+            />
+            <InputSection
+              sectionName="Education"
+              inputFields={inputFieldGroups.education}
+              data={educationData}
+              onChange={handleEducationInfoChange}
+            />
+          </aside>
+          <section className="resume-container">
+            <Resume data={{ generalData, experienceData, educationData }} />
+          </section>
+        </main>
+      </div>
     </>
   );
 };

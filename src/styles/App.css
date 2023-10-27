@@ -1,4 +1,21 @@
+.main-container {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 .page-title {
   text-align: center;
   padding: 20px;
+}
+
+.main {
+  display: flex;
+}
+
+.sidebar {
+}
+
+.resume-container {
+  padding: 50px;
 }

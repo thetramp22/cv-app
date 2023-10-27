@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import "../styles/Resume.css";
 
 const Resume = ({ data }) => {
   return (
-    <>
+    <div className="resume">
       <div>
         <p>{data.generalData.fullName}</p>
         <p>{data.generalData.email}</p>
@@ -31,7 +32,7 @@ const Resume = ({ data }) => {
         <p>{data.educationData.country}</p>
         <p>{data.educationData.achievements}</p>
       </div>
-    </>
+    </div>
   );
 };
 

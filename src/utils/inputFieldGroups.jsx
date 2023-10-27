@@ -14,7 +14,7 @@ const inputFieldGroups = {
     },
     {
       name: "phone",
-      type: "text",
+      type: "tel",
       className: "input",
       placeholder: "Phone Number",
     },
@@ -58,13 +58,13 @@ const inputFieldGroups = {
     },
     {
       name: "startDate",
-      type: "text",
+      type: "date",
       className: "input",
       placeholder: "Start Date",
     },
     {
       name: "endDate",
-      type: "text",
+      type: "date",
       className: "input",
       placeholder: "End Date",
     },
@@ -88,7 +88,7 @@ const inputFieldGroups = {
     },
     {
       name: "responsibilities",
-      type: "text",
+      type: "textarea",
       className: "input",
       placeholder: "Responsibilities or Accomplishments",
     },
@@ -108,7 +108,7 @@ const inputFieldGroups = {
     },
     {
       name: "graduationDate",
-      type: "text",
+      type: "date",
       className: "input",
       placeholder: "Graduation Date",
     },
@@ -132,7 +132,7 @@ const inputFieldGroups = {
     },
     {
       name: "achievements",
-      type: "text",
+      type: "textarea",
       className: "input",
       placeholder: "Academic Achievements",
     },

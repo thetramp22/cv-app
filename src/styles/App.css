@@ -14,8 +14,10 @@
 }
 
 .sidebar {
+  flex: 1;
 }
 
 .resume-container {
+  flex: 1.75;
   padding: 50px;
 }

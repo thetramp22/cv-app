@@ -3,8 +3,20 @@
   padding: 10px;
   border-radius: 10px;
   border: 0;
+  font-family: inherit;
 }
 
 .input:focus {
   outline: 0;
+}
+
+.input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #666;
+  margin-right: 0.5em;
+}
+
+.input[type="date"]:focus:before,
+.input[type="date"]:valid:before {
+  content: "";
 }

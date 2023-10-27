@@ -9,7 +9,18 @@ const InputField = ({
   value,
   onChange,
 }) => {
-  return (
+  return type === "textarea" ? (
+    <textarea
+      rows="5"
+      style={{ resize: "none" }}
+      name={name}
+      className={className}
+      aria-label={placeholder}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    />
+  ) : (
     <input
       name={name}
       type={type}
